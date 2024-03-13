@@ -51,27 +51,27 @@ function App() {
   return (
     <>
       <RegularList
-        items={people}
-        resourceName="person"
-        itemComponent={SmallPersonListItem}
+        data={people}
+        componentProp="person"
+        component={SmallPersonListItem}
       />
 
       <NumberedList
-        items={people}
-        resourceName="person"
-        itemComponent={LargePersonListItem}
+        data={people}
+        componentProp="person"
+        component={LargePersonListItem}
       />
 
       <RegularList
-        items={products}
-        resourceName="product"
-        itemComponent={SmallProductListItem}
+        data={products}
+        componentProp="product"
+        component={SmallProductListItem}
       />
 
       <NumberedList
-        items={products}
-        resourceName="product"
-        itemComponent={LargeProductListItem}
+        data={products}
+        componentProp="product"
+        component={LargeProductListItem}
       />
     </>
   );

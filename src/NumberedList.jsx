@@ -1,14 +1,14 @@
 export const NumberedList = ({
-  items,
-  resourceName,
-  itemComponent: ItemComponent,
+  data,
+  componentProp,
+  component: Component,
 }) => {
   return (
     <>
-      {items.map((item, i) => (
+      {data.map((item, i) => (
         <>
           <h3>{i + 1}.</h3>
-          <ItemComponent key={i} {...{ [resourceName]: item }} />
+          <Component key={i} {...{ [componentProp]: item }} />
         </>
       ))}
     </>

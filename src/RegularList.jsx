@@ -1,12 +1,12 @@
 export const RegularList = ({
-  items,
-  resourceName,
-  itemComponent: ItemComponent,
+  data,
+  componentProp,
+  component: Component,
 }) => {
   return (
     <>
-      {items.map((item, i) => (
-        <ItemComponent key={i} {...{ [resourceName]: item }} />
+      {data.map((item, i) => (
+        <Component key={i} {...{ [componentProp]: item }} />
       ))}
     </>
   );

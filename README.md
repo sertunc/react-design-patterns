@@ -1,3 +1,3 @@
-# react-design-patterns
-React design patterns examples
+# React Design Patterns
+
 A branch has been opened for each example

@@ -1,26 +1,18 @@
-import { CurrentUserLoader } from "./CurrentUserLoader";
-import { UserLoader } from "./UserLoader";
-import { ResourceLoader } from "./ResourceLoader";
 import { UserInfo } from "./UserInfo";
-import { ProductInfo } from "./ProductInfo";
+import { withUser } from "./withUser";
+import { UserInfoForm } from "./UserInfoForm";
+import { UserInfoForm2 } from "./UserInfoForm2";
+
+const UserInfoWithLoader = withUser(UserInfo, "123");
 
 function App() {
   return (
     <>
-      <UserLoader userId="123">
-        <UserInfo />
-      </UserLoader>
+      <UserInfoWithLoader />
       <hr />
-      <ResourceLoader propName="user" url="http://localhost:8080/users/123">
-        <UserInfo />
-      </ResourceLoader>
+      <UserInfoForm />
       <hr />
-      <ResourceLoader
-        propName="product"
-        url="http://localhost:8080/products/1234"
-      >
-        <ProductInfo />
-      </ResourceLoader>
+      <UserInfoForm2 />
     </>
   );
 }

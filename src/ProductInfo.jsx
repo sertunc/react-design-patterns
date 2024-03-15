@@ -1,4 +1,6 @@
-export const ProductInfo = ({ product }) => {
+import { useResource } from "./useResource";
+export const ProductInfo = ({ id }) => {
+  const product = useResource(`http://localhost:8080/products/${id}`);
   const { name, price, description, rating } = product || {};
 
   return product ? (
